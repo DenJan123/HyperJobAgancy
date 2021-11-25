@@ -1,0 +1,12 @@
+{% extends "vacancy/layout.html" %}
+
+{% block body %}
+<h2>That is a profile page </h2>
+<h3>You are logged in as: {{user.username}} </h3>
+{% if user.profile.is_staff %}
+    <h3>You can add vacancies since you are a staff member</h3>
+{% else %}
+    <h3>You can add resumes </h3>
+{% endif %}
+
+{% endblock %}

@@ -1,0 +1,9 @@
+{% extends "vacancy/layout.html" %}
+
+{% block body %}
+<form method="post" action="login">{% csrf_token %}
+  <table>{{ form.as_table }}</table>
+  <button type="submit">Send</button>
+</form>
+
+{% endblock %}

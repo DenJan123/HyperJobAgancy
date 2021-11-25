@@ -1,0 +1,21 @@
+{% extends "vacancy/layout.html" %}
+
+{% block body %}
+<h2> Welcome to HyperJob! </h2>
+{% if user.username %}
+<h3> Your are: {{user.username}}</h3>
+{% else %}
+<h3> You need to log in </h3>
+{% endif %}
+<nav>
+    <div><a href="/login">Login page</a></div>
+    <div><a href="/logout">Logout</a></div>
+    <div><a href="/signup">Sign up page</a></div>
+    <div><a href="/vacancies">Vacancy list</a></div>
+    <div><a href="/resumes">Resume list</a></div>
+    <div><a href="/home">Personal profile</a></div>
+    <div><a href="/vacancy/new">Add vacancy</a></div>
+    <div><a href="/resume/new">Add resume</a></div>
+    <div><a href="/home">Profile page</a></div>
+</nav>
+{% endblock %}
